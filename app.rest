@@ -1,0 +1,51 @@
+POST http://localhost:8000/api/register 
+Content-Type: application/json
+
+{
+    "name":"Khalil",
+    "email":"Khalil@gmail.com",
+    "password":"password",
+    "password_confirmation":"password"
+
+}
+###
+POST http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+    "email":"Amine@gmail.com",
+    "password":"password"
+}
+###
+POST http://localhost:8000/api/logout
+Authorization: Bearer UNuDbp3U4AyUPxd7kWoL2qgL3gy2FSq9KDhZMWLnguJvvQsootL2kUXbzr77
+###
+POST http://localhost:8000/api/books
+Authorization: Bearer 3VLWweIUxmFT7es9rb1Ac3Y9AOOA2hFtCnMqIlkIivp1SEIWJfAnBPbO60vN
+Content-Type: application/json
+
+{
+    "title":"this is a title",
+    "author":"this is an author",
+    "description":"this is a description"
+}
+###
+GET http://localhost:8000/api/books/5
+Authorization: Bearer 3VLWweIUxmFT7es9rb1Ac3Y9AOOA2hFtCnMqIlkIivp1SEIWJfAnBPbO60vN
+###
+PUT http://localhost:8000/api/books/1
+Authorization: Bearer Dv33zrm2O8pT2VKtkCtXwBASs7sX7JXGpdZ2nh3EC13GxKhU2Avw76F4NGSZ
+Content-Type: application/json
+
+{
+    "title":" title",
+    "author":"n author",
+    "description":" description"
+}
+###
+DELETE http://localhost:8000/api/books/1
+Authorization: Bearer ymWs8JNVEiBwGQRoQWB9k8mOovFfA08MsaQ9XvXPjZpaxCitFHd7GhRjdhoM
+###
+GET http://localhost:8000/api/books
+Authorization: Bearer X0YuDmAk4DLzyGTkPR85250ZyI7kbrI0iRO3TgY1AyneWbWVF2hSvYnbPuxz
+
